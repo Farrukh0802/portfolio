@@ -34,3 +34,12 @@ $(document).ready(function(){
         ]
       });
       });
+      $(document).ready(function(){   
+      var typed = new Typed('#typed', {
+        strings: ['web developer', 'wordpress expert'],
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 50,
+        smartBackspace: true
+      })
+    });

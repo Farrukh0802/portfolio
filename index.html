@@ -34,8 +34,9 @@
         </nav>
         <section class="main">
             <div class="wrapper">
-                <h1>Hi, <br> I`m Farrukh, <br> web developer.</h1>
+                <h1>Hi, <br> I`m Farrukh, <br><span id="typed"></span></h1>
                 <p>Front End Developer | Wordpress Expert</p>
+                
             </div>
         </section>
     </div>
@@ -122,33 +123,38 @@
                 <div class="col-7 mx-auto">
                     <h4 class="text-center">Get in touch</h4>
                     <div class="row">
-                        <div class="main__contact">
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input class="form-control" type="text" id="name" maxlength="30" required>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label for="phone">Phone number</label>
-                                    <input class="form-control" type="text" id="phone" maxlength="30" required>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row additional">
-                            <div class="col-12">
-                                <label for="message">Message</label>
-                                <textarea class="form-control" id="message" rows="5"></textarea>
-                            </div>
-                    </div>
-                    <div class="row ">
                         <div class="col-12">
+                            <form action="telegram.php" method="POST">
+                            <div class="main__contact">
+                                <div class="col-6 pl-0">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input class="form-control" name="user_name" type="text" id="name" maxlength="30" required>
+                                    </div>
+                                </div>
+                                <div class="col-6 pr-0">
+                                    <div class="form-group">
+                                        <label for="phone">Phone number</label>
+                                        <input class="form-control" name="user_phone" type="text" id="phone" maxlength="30" required>
+                                    </div>
+                                </div>
+                            </div>
                             
-                        <div class="send"><a href="#" class="btn__send">Send</a></div>
-                        </div>  
-                    </div>
+                            <div class="row additional">
+                                <div class="col-12">
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control" name="user_message" id="message" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="row ">
+                            <div class="col-12">
+                                
+                            <div class="send"><button type="submit" class="btn__send">Send</button></div>
+                            </div>  
+                            
+                        </div>
+                            </form>
+                        </div>
                 </div>
             </div>
         </div>
@@ -166,6 +172,8 @@
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="js/main.js"></script>
+   
 </body>
 </html>
